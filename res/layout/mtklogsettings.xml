@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- /**
+ * @author Alex Tauber
+ * 
+ * This file is part of the Android app MTKutility.
+ * 
+ * MTKutility is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3 of the License. This extends to files
+ * included that were authored by others and modified to make them suitable for
+ * MTKutility. All files included were subject to open source licensing.
+ * 
+ * MTKutility is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You can review a copy of the GNU General Public License
+ * at http://www.gnu.org/licenses.
+ *
+ */ -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/logMSG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:text="@+id/logMSG" />
+
+        <TableLayout
+            android:id="@+id/frame1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/logMSG"
+            android:layout_margin="3dp"
+            android:background="@drawable/rounded_border" >
+
+            <TableRow
+                android:id="@+id/frame1R1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/txtUTC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="1"
+                    android:text="@string/txtUTC"
+                    android:textColor="#1115a6"
+                    android:textStyle="italic" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame1R2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxDate"
+                    android:layout_height="25dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxDate"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame1R3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxMili"
+                    android:layout_height="25dp"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxMili"
+                    android:textSize="12sp" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/frame2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logMSG"
+            android:layout_margin="3dp"
+            android:layout_toRightOf="@+id/frame1"
+            android:background="@drawable/rounded_border" >
+
+            <TableRow
+                android:id="@+id/frame2R1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/txtNav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="1"
+                    android:text="@string/txtNav"
+                    android:textColor="#1115a6"
+                    android:textStyle="italic" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame2R2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxLat"
+                    android:layout_height="25dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxLat"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame2R3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxLon"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxLon"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame2R4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxHei"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxHei"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame2R5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxSpd"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxSpd"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame2R6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxHed"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxHed"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame2R7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxDis"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxDis"
+                    android:textSize="12sp" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/frame3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logMSG"
+            android:layout_margin="3dp"
+            android:layout_toRightOf="@+id/frame2"
+            android:background="@drawable/rounded_border" >
+
+            <TableRow
+                android:id="@+id/frame3R1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/txtRmd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="1"
+                    android:text="@string/txtRmd"
+                    android:textColor="#1115a6"
+                    android:textStyle="italic" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame3R2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxRCR"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxRCR"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame3R3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxVal"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxVal"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame3R4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxFxo"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxFxo"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame3R5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioGroup
+                    android:id="@+id/rgrRem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RadioButton
+                        android:id="@+id/rbnOvr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:text="@string/rbnOvr"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbnStp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="5dp"
+                        android:checked="true"
+                        android:text="@string/rbnStp"
+                        android:textSize="12sp" />
+                </RadioGroup>
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/frame4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/frame1"
+            android:layout_below="@+id/frame1"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/rounded_border" >
+
+            <TableRow
+                android:id="@+id/frame4R1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/txtSat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="1"
+                    android:text="@string/txtSat"
+                    android:textColor="#1115a6"
+                    android:textStyle="italic" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame4R2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxNsat"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxNsat"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame4R3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxSID"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxSID"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame4R4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxEle"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:alpha=".5"
+                    android:clickable="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxEle"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame4R5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxAzi"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:alpha=".5"
+                    android:clickable="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxAzi"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame4R6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxSNR"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:alpha=".5"
+                    android:clickable="false"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxSNR"
+                    android:textSize="12sp" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/frame5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/frame2"
+            android:layout_alignRight="@+id/frame2"
+            android:layout_below="@+id/frame2"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/rounded_border" >
+
+            <TableRow
+                android:id="@+id/frame5R1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/txtDiff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="1"
+                    android:text="@string/txtDiff"
+                    android:textColor="#1115a6"
+                    android:textStyle="italic" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame5R2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxDSTA"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxDSTA"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame5R3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxDAGE"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxDAGE"
+                    android:textSize="12sp" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/frame6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/frame3"
+            android:layout_alignRight="@+id/frame3"
+            android:layout_below="@+id/frame3"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/rounded_border" >
+
+            <TableRow
+                android:id="@+id/frame6R1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/txtDOP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="1"
+                    android:text="@string/txtDOP"
+                    android:textColor="#1115a6"
+                    android:textStyle="italic" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame6R2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxPDOP"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxPDOP"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame6R3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxHDOP"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxHDOP"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame6R"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cbxVDOP"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onCheckboxClicked"
+                    android:text="@string/cbxVDOP"
+                    android:textSize="12sp" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/frame7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/frame4"
+            android:layout_below="@+id/frame4"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/rounded_border" >
+
+            <TableRow
+                android:id="@+id/frame7R0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/txtBtns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="1"
+                    android:text="@string/txtBtns"
+                    android:textColor="#1115a6"
+                    android:textStyle="italic" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame7R1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <Button
+                    android:id="@+id/btnDflt"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:minHeight="16dp"
+                    android:text="@string/btnDflt" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame7R2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <Button
+                    android:id="@+id/btnClrA"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="16dp"
+                    android:text="@string/btnClrA" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame7R3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <Button
+                    android:id="@+id/btnRefr"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="16dp"
+                    android:text="@string/btnRefr" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/frame7R4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <Button
+                    android:id="@+id/btnSet"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:minHeight="16dp"
+                    android:text="@string/btnSet" />
+            </TableRow>
+        </TableLayout>
+
+        <GridLayout
+            android:id="@+id/frame8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/frame5"
+            android:layout_alignRight="@+id/frame6"
+            android:layout_below="@+id/frame5"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/rounded_border"
+            android:columnCount="4"
+            android:orientation="horizontal"
+            android:rowCount="5" >
+
+            <TextView
+                android:id="@+id/txvAul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnSpan="4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_row="0"
+                android:maxLines="1"
+                android:text="@string/txvAul"
+                android:textColor="#1115a6"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvByTime"
+                android:layout_width="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_row="1"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="@string/tvByTime"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtByT"
+                android:layout_column="1"
+                android:layout_gravity="right"
+                android:layout_row="1"
+                android:gravity="bottom|right"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                android:maxLines="1"
+                android:textSize="15sp" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/txvByT"
+                android:layout_column="2"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="3dp"
+                android:layout_row="1"
+                android:maxLines="1"
+                android:text="@string/txvByT"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtByD"
+                android:layout_gravity="right"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:gravity="bottom|right"
+                android:inputType="number"
+                android:maxLength="4"
+                android:maxLines="1"
+                android:textSize="15sp" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/txvByD"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="3dp"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:maxLines="1"
+                android:text="@string/txvByD"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtByS"
+                android:layout_column="1"
+                android:layout_gravity="right"
+                android:layout_row="3"
+                android:gravity="bottom|right"
+                android:inputType="number"
+                android:maxLength="3"
+                android:maxLines="1"
+                android:textSize="15sp" >
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/txvByS"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="3dp"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:maxLines="1"
+                android:text="@string/txvByS"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvByDist"
+                android:layout_column="0"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_row="2"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="@string/tvByDist"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvSpdOvr"
+                android:layout_column="0"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_row="3"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="@string/tvSpdOvr"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnSave"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_row="4"
+                android:minHeight="16dp"
+                android:text="@string/btnSave" />
+
+            <Button
+                android:id="@+id/btnRefr2"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="left|top"
+                android:layout_row="4"
+                android:minHeight="16dp"
+                android:text="@string/btnRefr" />
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/txvBitm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/frame8"
+            android:layout_alignRight="@+id/frame8"
+            android:layout_below="@+id/frame8"
+            android:maxLines="1"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</ScrollView>

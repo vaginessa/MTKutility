@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ /**
+ * @author Alex Tauber
+ * 
+ * This file is part of the Android app MTKutility.
+ * 
+ * MTKutility is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3 of the License. This extends to files
+ * included that were authored by others and modified to make them suitable for
+ * MTKutility. All files included were subject to open source licensing.
+ * 
+ * MTKutility is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You can review a copy of the GNU General Public License
+ * at http://www.gnu.org/licenses.
+ *
+ */
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    tools:context=".logDnldFragment" >
+
+    <TextView
+        android:id="@+id/AGPStitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:clickable="false"
+        android:inputType="none"
+        android:maxLines="2"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:typeface="normal" >
+    </TextView>
+    
+    <Button
+        android:id="@+id/btnBINdnld"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/AGPStitle"
+        android:layout_marginTop="15dp"
+        android:minHeight="12dp"
+        android:text="@string/bBtnDnld" />
+
+    <TextView
+        android:id="@+id/mOLdesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/msl_overlap"
+        android:layout_alignLeft="@+id/msl_overlap"
+        android:layout_marginLeft="10dp"
+        android:maxHeight="12dp"
+        android:maxLines="2"
+        android:text="@string/mOLdesc"
+        android:textSize="12sp" />
+
+    <Spinner
+        android:id="@+id/msl_overlap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnBINdnld"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/btnBINdnld"
+        android:entries="@array/listOverlapShow"
+        android:maxLines="1"
+        android:prompt="@string/overlapPref"
+        android:textSize="10sp" />
+    
+	<Button
+	    android:id="@+id/btnCLR"
+	    style="?android:attr/buttonStyleSmall"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+id/btnBINdnld"
+	    android:minHeight="12dp"
+	    android:text="@string/btn_clearlog" />
+	
+	<CheckBox
+	    android:id="@+id/mcb_mkGPX"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/btnCLR"
+	    android:layout_marginLeft="10dp"
+	    android:layout_toRightOf="@+id/btnCLR"
+	    android:text="@string/mcb_MakeGPX"
+	    android:textSize="10sp" />
+
+	<CheckBox
+	    android:id="@+id/mcb_OneTrk"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@+id/mcb_mkGPX"
+	    android:layout_alignBaseline="@+id/btnCLR"
+	    android:hint="@string/createOneTrkPref_summary"
+	    android:text="@string/createOneTrkPref"
+	    android:textSize="10sp" />
+
+	<TextView
+	    android:id="@+id/bDLdesc"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+id/btnCLR"
+	    android:layout_marginLeft="2dp"
+	    android:layout_marginTop="12dp"
+	    android:text="@string/bDLdesc"
+	    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/btvDLpath"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bDLdesc"
+        android:layout_alignLeft="@+id/gtvDLpath"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:hint="@string/bDLpath"
+        android:minHeight="12dp" />
+	
+	<TextView
+	    android:id="@+id/gDLdesc"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+id/bDLdesc"
+	    android:layout_marginLeft="2dp"
+	    android:layout_marginTop="15dp"
+	    android:text="@string/gDLdesc" />
+
+    <TextView
+        android:id="@+id/gtvDLpath"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/gDLdesc"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@+id/gDLdesc"
+        android:clickable="true"
+        android:hint="@string/gDLpath"
+        android:minHeight="12dp" />
+
+    <ScrollView
+        android:id="@+id/msv_Text"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/gDLdesc"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_border" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/mtv_Serial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

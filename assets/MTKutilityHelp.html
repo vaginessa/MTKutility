@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>MTK logger utility</title></head><body>
+<div style="text-align: center;">
+<p><big><big><span style="font-weight: bold;"><span style="color: rgb(0, 153, 0);">The Things You Need to Know</span></span></big></big></p>
+</div><b style="color: rgb(51, 51, 255);"><i>MTKutility</i></b>
+is a maintenance app for Bluetooth capable GPS receivers and loggers
+that use
+the MTK (GPS) chip.&nbsp; The MTK GPS devices that it will work with are GPS
+receivers (no logging) with or without AGPS and GPS loggers with or
+without AGPS.<br>
+<br>
+Version 2.5 introduces the ability to create GPX files from BIN
+downloads without connecting to the GPS device, text size settings
+for all the screens and a user selectable html SETTINGS
+tab for phones with a smaller screen resolution.<span style="font-style: italic;"><br>
+<br>
+<span style="color: red;">email me if this MTKutility doesn't work with your phone and GPS combination</span></span> - <a href="mailto:adt.androidapps@gmail.com" target="_blank">adt.androidapps@gmail.com</a>.&nbsp; MTKutility has crash logging built in and also extensive execution logging that I am able to use to resolve issues.<br>
+<br>
+MTKutility<u1:p> has 5 tabs: <st1:place style="font-style: italic; color: rgb(51, 51, 255);" u2:st="on"><st1:place w:st="on">MAIN</st1:place></st1:place>,
+<span style="font-style: italic; color: rgb(51, 51, 255);">GPX, DOWNLOAD</span>, </u1:p><span style="font-style: italic; color: rgb(51, 51, 255);">AGPS,</span><u1:p>
+</u1:p>
+and <u1:p><span style="font-style: italic; color: rgb(51, 51, 255);">SETTINGS</span>.&nbsp; The tabs that are visible depend on the features of your GPS device and the Bluetooth connection state.<br>
+<br>
+On startup the </u1:p><st1:place style="font-style: italic; color: rgb(51, 51, 255);" u2:st="on"><st1:place w:st="on">MAIN</st1:place></st1:place> and <span style="font-style: italic; color: rgb(51, 51, 255);">GPX</span> tabs <span style="color: rgb(51, 51, 255);"><span style="color: black;">are visible.&nbsp; </span></span><u1:p>Completing a Bluetooth connection to a GPS logger with AGPS results in the </u1:p><span style="font-style: italic; color: rgb(51, 51, 255);">GPX</span> <u1:p>tab disappearing and the</u1:p><span style="font-style: italic; color: rgb(51, 51, 255);"> DOWNLOAD</span>, <span style="font-style: italic; color: rgb(51, 51, 255);">AGPS,</span><u1:p>
+</u1:p>
+and <u1:p><span style="font-style: italic; color: rgb(51, 51, 255);">SETTINGS</span></u1:p><span style="font-style: italic; color: rgb(51, 51, 255);"></span><u1:p> tabs appearing.&nbsp; There is an alternate </u1:p><span style="font-style: italic; color: rgb(51, 51, 255);">SETTINGS</span><u1:p> tab (</u1:p>user selectable in app preferences<u1:p>) with a smaller footprint for phones with a lower screen capacity.<br>
+<br>
+The </u1:p><st1:place style="font-style: italic; color: rgb(51, 51, 255);" u2:st="on"><st1:place w:st="on">MAIN</st1:place></st1:place><u1:p>
+tab function is to connect to the GPS device and show the
+connected state by displaying the NMEA sentences sent by GPS
+device.&nbsp; The type of NMEA sentences displayed can be
+configured.&nbsp; The </u1:p>NMEA sentences<u1:p>
+are not
+used by MTKutility. The restart buttons send a restart command to the
+GPS -- hot restart: use all available data in the NV Store; warm
+restart: don't use Ephemeris at re-start, cold restart: don't use Time,
+Position, Almanacs and Ephemeris data at re-start; factory reset
+restart: cold restart and clear system/user configurations (reset the
+receiver to the factory status).<br>
+<br>
+The<span style="font-style: italic;"> </span></u1:p><span style="font-style: italic; color: rgb(51, 51, 255);">GPX</span><u1:p><span style="font-style: italic;"></span></u1:p><u1:p> tab function is creating GPX files from previously downloaded binary files without having to connect to your GPS logger.<br>
+<br>
+The </u1:p><span style="font-style: italic; color: rgb(51, 51, 255);">DOWNLOAD</span><u1:p>
+tab
+is used to download the track point data from your GPS logger.&nbsp; The
+files
+created are raw GPS logger memory dumps.&nbsp; They cannot be used
+directly by track display apps.&nbsp; This tab also has the option of
+creating a GPX format file that can be used by track display
+apps.&nbsp; Large downloads - 50,000+ track points -&nbsp; may
+fail.&nbsp; The symptom is the progress bar stops moving.&nbsp; This
+appears to be related to Bluetooth communication stopping.<br>
+<br></u1:p><u1:p>The </u1:p><span style="font-style: italic; color: rgb(51, 51, 255);">AGPS</span><u1:p> tab is is used to down load an </u1:p><span class="st">Extended Prediction Orbit (EPO) file and load the contents to your AGPS logger.&nbsp; This </span><u1:p></u1:p>tab has default preferences set for the Transystem.co.tw ftp site and
+the 7 day EPO&nbsp;<span class="st"></span><span class="st">file.&nbsp; </span>The AGPS data refresh is
+coded for a 60 byte SAT data set (1920 Byte EPO set).<br>
+<br>
+The <span style="font-style: italic; color: rgb(51, 51, 255);">SETTINGS</span> tab is used to configure the data recorded by your logger. The default <span style="font-style: italic; color: rgb(51, 51, 255);">SETTINGS</span> tab has check boxes for the logger settings.&nbsp; There is an alternate a <span style="font-style: italic; color: rgb(51, 51, 255);">SETTINGS</span>
+layout for phones that do not have enough resolution to display the
+checkbox screen without scrolling.&nbsp; This alternate layout is
+selected in the app Preferences.<br>
+
+<br>
+<span style="font-weight: bold;">
+Each of the tabs has text size settings in app Preferences</span>.&nbsp; Use
+them to adjust the screen appearance and ensure that all data fields
+and buttons are visible on your phone.&nbsp; <span style="font-weight: bold;">NOTE:</span>
+you need to exit and restart MTKutility to have text size changes take
+effect.<br>
+<br>
+<div style="text-align: center;"><big><big><span style="font-weight: bold;"><span style="color: rgb(0, 153, 0);">How to deal with problems that arise while using MTKutility</span></span></big></big><br>
+</div>
+<p class="MsoNormal" style=""><u1:p><span class="st"><span style="color: rgb(204, 0, 0);"><span style="font-weight: bold; text-decoration: underline; font-style: italic;"></span></span>Your MTK logger is put into binary communication
+mode for the AGPS data update.&nbsp; <span style="font-style: italic; font-weight: bold; text-decoration: underline; color: red;">If MTKutility fails during the AGPS update</span>, your
+logger will remain in binary mode and <span style="font-weight: bold;">will not function</span> as a track
+point
+recorder until NMEA mode is restored<span style="font-style: italic;"><span style="font-weight: bold;">.&nbsp; </span></span><span style="font-style: italic; font-weight: bold; color: red;">Make sure
+you run MTKutility again to
+restore NMEA output mode if it fails during an AGPS update.</span></span></u1:p></p>
+<p class="MsoNormal" style=""><u1:p>NMEA output is turned off for the
+log download and AGPS update.&nbsp; A crash while either of these is taking
+place will probably result in NMEA output being turned off.&nbsp; Use the </u1:p><i style="color: rgb(51, 51, 255);">Default NMEA</i> button to restore output.</p>
+<p class="MsoNormal" style=""><u1:p>
+<span class="st">Both
+the log download and AGPS update might stop working if they are
+interrupted.&nbsp; </span></u1:p><span class="st">Screen
+timeout is disabled when the tabs for these functions are active.&nbsp; The
+Bluetooth connection may also be lost if MTKutility loses focus (has
+its screen replaced by a different one).&nbsp; The
+symptoms are log download freezes, AGPS update freezes, and app crashes
+when you switch to another tab.&nbsp; </span>You
+can recover from a download or AGPS update freeze by using the phone's
+back button to exit the function.&nbsp; Make sure you also exit
+MTKutility and restart it when you do this as MTKutility will not work
+correctly after a freeze recovery. &nbsp;</p><p>There are a couple of download settings in the app Preferences that
+do not appear in the <span style="font-style: italic; color: rgb(51, 51, 255);">Download</span>
+tab.&nbsp; The default values should be OK for most download scenarios.</p>
+<p><span style="font-weight: bold; color: red;">Actions to take if </span><span class="st"><span style="font-weight: bold; color: red;">MTKutility</span></span><span style="font-weight: bold; color: red;"> crashes:</span> cycle your phone's Bluetooth off and on, turn your GPS off and on,
+and try connecting again.&nbsp; <span style="font-weight: bold; font-style: italic;">MTKutility pushes
+Android capabilities and implements Bluetooth data exchanges that would be better handled via a USB connection.</span></p>
+<div style="text-align: center;"><big><big><span style="font-weight: bold;"><span style="color: rgb(0, 153, 0);">crash reporting</span></span></big></big><br>
+</div>
+
+<span class="st"><span style="color: rgb(204, 0, 0);"><span style="font-weight: bold; text-decoration: underline; font-style: italic;"></span></span></span>
+<p>MTKutility has crash logging built in. A file named
+MTKutilityDebug.txt is created in your internal sotrage when MTKutility
+crashes. <span style="font-style: italic;"><span style="color: red;">Please email this file to me </span></span>- <a href="mailto:adt.androidapps@gmail.com" target="_blank">adt.androidapps@gmail.com -</a><span style="font-style: italic;"><span style="color: red;"> and provide a short description of what you were trying to do when MTKutility crashed.</span></span> I am dedicated to trying to have MTKutility work reliably with all MTK chip GPS devices.<br>
+</p>
+
+<div style="text-align: center;">
+<p><big><big><span style="color: rgb(0, 153, 0);"><span style="font-weight: bold;">Legal</span></span></big></big></p>
+</div><p>author Al Tauber 
+</p><p>MTKutility is free software.&nbsp; You can redistribute it and/or
+modify it under the terms of Version 3 of the GNU General Public
+License (GNU GPL) as published
+by the Free Software Foundation.&nbsp; This license extends
+to the included GNU GPL licensed files from Bastiaan Naber's AndroidMTK
+app and the file browser function derived from Anders Kalør's Apache
+Version 2.0 Licensed FilePickerActivityProject (<a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">http://www.apache.org/licenses/LICENSE-2.0</a>). &nbsp;</p><p>MTKutility is distributed in the hope that it will be
+useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.&nbsp; See the GNU
+General Public License for more details.&nbsp; You can review a
+copy of the GNU General Public License at <a href="http://www.gnu.org/licenses">http://www.gnu.org/licenses</a>.&nbsp; The source code for this app is on GitHub - <a href="https://github.com/altauber/MTKutility" target="_blank">https://github.com/altauber/MTKutility</a> 
+</p><div style="text-align: center;">
+<p><big><big><span style="font-weight: bold;"><span style="color: rgb(0, 153, 0);">Credits</span></span></big></big></p>
+</div><b style="color: rgb(51, 51, 255);"><i>MTKutility</i></b> was
+inspired by Bastiaan Naber's AndroidMTK app.&nbsp; The development
+objective was to create an Android equivalent of the Windows app
+MtkDlut (<a href="http://homepage2.nifty.com/k8/gps/index.htm#007" target="_blank">http://homepage2.nifty.com/k8/gps/index.htm#007</a>).&nbsp; <br>
+<p class="MsoNormal">The
+app's roots are in Keisuke Suzuki's AndroidUSBSerialMonitorLite and
+FTdriver.&nbsp; It started as an AGPS data update to a USB connected Qstarz
+GPS logger.&nbsp; The development environment is the Android SDK
+(Eclispe) and the free version of vmware
+with the x86 Android 4.3 iso image loaded.&nbsp; The finished app combines
+java files
+from Bastiaan Naber's AndroidMTK, an enhancement to Anders Kalør's
+FilePickerActivityProjectwith, and new code files that deliver the log
+download, GPS
+logger settings maintenance,
+and the AGPS data update.&nbsp; Special thanks go to:</p>
+<ul>
+  <li> Satoshi
+Kinoshita for helping me resolve a HTC One crash issue</li>
+  <li>Thomas
+Herrmann for testing the GPS receiver with AGPS (no logging) scenario</li>
+  <li>Christian Bauer for testing the GPS logger without APGS scenario</li>
+  <li>Ziva Zoran for testing the html SETTINGS tab and a number of bug fixes
+  </li>
+</ul>
+
+<p class="MsoNormal">Thanks
+also to all the coders who contribute Android expertise to Stack
+Overflow.&nbsp; After my AGPS eureka moment of achieving a complete data
+refresh, app development was mostly about learning Android
+java and the nuances of coding for a phone.</p>
+</body></html>

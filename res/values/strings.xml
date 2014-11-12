@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- /**
+ * @author Alex Tauber
+ * 
+ * This file is part of the Android app MTKutility.
+ * 
+ * MTKutility is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3 of the License. This extends to files
+ * included that were authored by others and modified to make them suitable for
+ * MTKutility. All files included were subject to open source licensing.
+ * 
+ * MTKutility is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You can review a copy of the GNU General Public License
+ * at http://www.gnu.org/licenses.
+ *
+ */ -->
+<resources>
+
+    <string name="app_name">MTKutility</string>
+    <!-- Tab Strings -->
+    <string name="ui_tabname_gpx">GPX</string>
+    <string name="ui_tabname_main">main</string>
+    <string name="ui_tabname_agps">AGPS</string>
+    <string name="ui_tabname_dnld">Download</string>
+    <string name="ui_tabname_logset">Settings</string>
+    <string name="ui_tabname_htmset">Settings</string>
+    
+    <!-- Menu Strings -->
+    <string name="ui_menu_exit">exit</string>
+    <string name="ui_menu_preferences">settings</string>
+    <string name="ui_menu_about">about</string>
+    <string name="ui_menu_dummy">dummy</string>
+
+    <!-- AGPS server -->
+    <string name="agps_server">AGPS Server</string>
+    
+    <string name="ftp_ip">FTP Host</string>
+    <string name="ftp_ip_summary"></string>
+    
+    <string name="ftp_port">FTP Port</string>
+    <string name="ftp_port_summary"></string>
+    
+    <string name="username">User name</string>
+    <string name="username_summary"></string>
+    
+    <string name="pswd">Password</string>
+    <string name="pswd_summary"></string>
+    
+    <string name="epo_file">File name</string>
+    <string name="epo_file_summary"></string>
+
+    <!-- main screen fonts -->
+    <string name="mainFonts">MAIN tab fonts</string>
+
+	<string name="epoMSGblock">AGPS/log message text</string>
+    <string name="epoMSGblockSum"></string>
+    
+	<string name="mainSPhead">NMEA settings text</string>
+    <string name="mainSPheadSum"></string>
+    
+	<string name="mainSPlist">NMEA list text</string>
+    <string name="mainSPlistSum"></string>
+    
+	<string name="mainSetMsg">set record message text</string>
+    <string name="mainSetMsgSum"></string>
+    
+	<string name="mainBTNsave">Save button text</string>
+    <string name="mainBTNsaveSum"></string>
+    
+	<string name="mainBTNbar">button bar text</string>
+    <string name="mainBTNbarSum"></string>
+
+    <string name="dnldFonts">DOWNLOAD tab fonts</string>
+    <string name="dnldTexts">checkbox text</string>
+    <string name="dnldTextsSum"></string>
+    <string name="dnldButtons">button text</string>
+    <string name="dnldButtonsSum"></string>
+    
+    <string name="agpsFonts">AGPS tab fonts</string>
+    <string name="agpsButtons">button text</string>
+    <string name="agpsButtonsSum"></string>
+	<string name="agpsTexts">server info text</string>
+    <string name="agpsTextsSum"></string>
+    
+    <string name="btn_AGPS">Refresh AGPS</string>
+    <string name="btn_connect">Connect</string>
+    <string name="btn_exit">Exit</string>
+    <string name="textV"></string>
+    <string name="test">test</string>
+    <string name="btn_disconect">Disconnect</string>
+    <string name="btn_pause">Pause Log</string>
+    <string name="btn_clearlog">Clear BIN</string>
+    <string name="mFTP_pswd">password</string>
+    <string name="mFTP_userid">FTP userid</string>
+    <string name="mFTP_IP">FTP IP or URL</string>
+    <string name="mFTP_port">port #</string>
+    <string name="mFTP_file">EPO file name</string>
+    <string name="btn_save">save settings</string>
+    <string name="btn_refresh">Refresh AGPS</string>
+    <string name="hdr_bin_log">Log Download</string>
+    <string name="mcb_MakeGPS">Create GPX file</string>
+    <string name="bDLdesc">BIN file</string>
+    <string name="bDLpath">select a BIN file</string>
+    <string name="gDLdesc">GPX path</string>
+    <string name="gDLpath">select a GPX folder</string>
+    <string name="mcb_MakeGPX">Create GPX file</string>
+    <string name="createGPXPref">Create GPX file</string>
+    <string name="createGPXPref_summary">Create GPX file</string>
+    <string name="createOneTrkPref">Write one track</string>
+    <string name="createOneTrkPref_summary">Write only one trk section in the gpx file</string>
+    <string name="chunkSizePref">Chunk size</string>
+    <string name="chunkSizePref_summary">Size of chunk to download</string>
+    <string name="memSizePref">Memory size</string>
+    <string name="memSizePref_summary">Size of GPS memory</string>
+    <string name="overlapPref">Overlap mode</string>
+    <string name="overlapPref_summary">Choose what happens for GPS in overlap mode</string>
+    <string name="BINpath">BIN Save Path</string>
+    <string name="GPXpath">GPX Save Path</string>
+    <string name="path_summary">The location the exported data is saved to</string>
+    <string name="mOLdesc">Action when logger is set to Overwrite</string>
+    <string name="AGPStitle">AGPS server</string>
+    <string name="btn_save_changes">Save Changes</string>
+    <string name="btn_reset">Reset AGPS</string>
+    <string name="btn_Updt">Update AGPS</string>
+    <string name="NMEAsettings">NMEA settings</string>
+    <string name="txtUTC">UTC</string>
+    <string name="cbxDate">Date/time</string>
+    <string name="cbxMili">Mili-second</string>
+    <string name="txtNav">Navigation</string>
+    <string name="cbxLat">Latitude</string>
+    <string name="cbxLon">Longitude</string>
+    <string name="cbxHei">Height</string>
+    <string name="cbxSpd">Speed</string>
+    <string name="cbxHed">Heading</string>
+    <string name="txtRmd">Recording</string>
+    <string name="cbxFxo">Fix Only</string>
+    <string name="cbxRCR">Reason</string>
+    <string name="cbxDis">Distance</string>
+    <string name="cbxVal">Fix mode</string>
+    <string name="rbnOvr">Overwrite</string>
+    <string name="rbnStp">Stop</string>
+    <string name="txtSat">Sat Info</string>
+    <string name="cbxNsat">NSAT</string>
+    <string name="cbxSID">SID</string>
+    <string name="cbxEle">Elevation</string>
+    <string name="cbxAzi">Azimuth</string>
+    <string name="cbxSNR">SNR</string>
+    <string name="txtDiff">Differential</string>
+    <string name="cbxDSTA">DSTA</string>
+    <string name="cbxDAGE">DAGE</string>
+    <string name="txtDOP">DOP</string>
+    <string name="cbxPDOP">PDOP</string>
+    <string name="cbxHDOP">HDOP</string>
+    <string name="cbxVDOP">VDOP</string>
+    <string name="logTitle">Log Settings</string>
+    <string name="cbxByT">by Time</string>
+    <string name="cbxByD">by Distance</string>
+    <string name="cbxByS">by Speed</string>
+    <string name="txvByT">Sec.</string>
+    <string name="txvByD">meters</string>
+    <string name="txvByS">km/h</string>
+    <string name="txvAul">Recording frequency</string>
+    <string name="btnDflt">Default</string>
+    <string name="btnClrA">Clear all</string>
+    <string name="btnSelA">Select all</string>
+    <string name="btnRefr">Refresh</string>
+    <string name="btnSet">Set</string>
+    <string name="tvByTime">by time</string>
+    <string name="tvByDist">by distance</string>
+    <string name="tvSpdOvr">speed over</string>
+    <string name="txtBtns">Checkbox items</string>
+    <string name="btnSave">Save</string>
+    <string name="NMEAdesc">NMEA settings: GGA,GLL,GSA,GSV,RMC,VTG,ZDA</string>
+    <string name="NMEAsetngHint">1,0,1,1,1,0,0</string>
+    <string name="btnNMEAdflt">Default NMEA</string>
+    <string name="txNMEAinp">set record types and display frequeny</string>
+    <string name="debugPref">create debug log</string>
+    <string name="logDnldFragment">MTK command time out</string>
+    <string name="cmdTimeOutSum"></string>
+    <string name="bBtnDnld">Download BIN</string>
+    <string name="gBtnDnld">create GPX file</string>
+    <string name="useHTMLsettings">use Settings tab with HTML layout</string>
+    <string name="htmlSettingsButtons">buttons text size</string>
+    <string name="htmlSettingsTexts">HTML text size</string>
+    <string name="dnldDelay">BIN download response delay</string>
+    <string name="txtRS">restart</string>
+    <string name="btnCold">cold</string>
+    <string name="btnWarm">warm</string>
+    <string name="btnHot">hot</string>
+    <string name="btnReset">factory reset</string>
+        
+</resources>

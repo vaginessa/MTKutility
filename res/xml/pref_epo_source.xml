@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ /**
+ * @author Alex Tauber
+ * 
+ * This file is part of the Android app MTKutility.
+ * 
+ * MTKutility is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3 of the License. This extends to files
+ * included that were authored by others and modified to make them suitable for
+ * MTKutility. All files included were subject to open source licensing.
+ * 
+ * MTKutility is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You can review a copy of the GNU General Public License
+ * at http://www.gnu.org/licenses.
+ *
+ */
+--><PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:title="Bluetooth Device" android:key="Bluetooth Device">
+        <ListPreference
+            android:defaultValue=""
+            android:key="bluetoothListPref"
+            android:summary="Select your GPS device"
+            android:title="GPS device" />
+    </PreferenceCategory>
+
+    <PreferenceCategory 
+        android:title="Download Settings" android:key="Download Settings">
+        <Preference
+            android:key="BINpath"
+            android:summary=""
+            android:title="@string/BINpath" />
+
+        <Preference
+            android:key="GPXpath"
+            android:summary=""
+            android:title="@string/GPXpath" />
+
+        <ListPreference
+            android:defaultValue="2048"
+            android:entries="@array/listChunkSizeShow"
+            android:entryValues="@array/listChunkSizeReturn"
+            android:key="chunkSizePref"
+            android:summary="@string/chunkSizePref_summary"
+            android:title="@string/chunkSizePref" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/listMemSizeShow"
+            android:entryValues="@array/listMemSizeReturn"
+            android:key="memSizePref"
+            android:summary="@string/memSizePref_summary"
+            android:title="@string/memSizePref" />
+        
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/listOverlapShow"
+            android:entryValues="@array/listOverlapReturn"
+            android:key="overlapPref"
+            android:summary="@string/overlapPref_summary"
+            android:title="@string/overlapPref" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+		android:title="@string/agps_server" android:key="AGPS server">
+        <EditTextPreference
+            android:defaultValue="210.68.183.169"
+            android:key="epo_ip"
+            android:summary="@string/ftp_ip_summary"
+            android:title="@string/ftp_ip" />
+
+        <EditTextPreference
+            android:defaultValue="21"
+            android:key="epo_port"
+            android:summary="@string/ftp_port_summary"
+            android:title="@string/ftp_port" />
+
+        <EditTextPreference
+            android:defaultValue="tsi0001"
+            android:key="epo_username"
+            android:summary="@string/username_summary"
+            android:title="@string/username" />
+
+        <EditTextPreference
+            android:defaultValue="tweyet"
+            android:key="epo_pswd"
+            android:summary="@string/pswd_summary"
+            android:title="@string/pswd" />
+
+        <EditTextPreference
+            android:defaultValue="MTK7d.EPO"
+            android:key="epo_file"
+            android:summary="@string/epo_file_summary"
+            android:title="@string/epo_file" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/mainFonts" android:key="MAIN tab fonts">
+        <EditTextPreference
+            android:defaultValue="14"
+            android:key="epoMSGfont"
+            android:summary="@string/epoMSGblockSum"
+            android:title="@string/epoMSGblock" />
+
+        <EditTextPreference
+            android:defaultValue="16"
+            android:key="mainSPNRfont"
+            android:summary="@string/mainSPheadSum"
+            android:title="@string/mainSPhead" />
+
+        <EditTextPreference
+            android:defaultValue="13"
+            android:key="mainSetMsgfont"
+            android:summary="@string/mainSetMsgSum"
+            android:title="@string/mainSetMsg" />
+
+        <EditTextPreference
+            android:defaultValue="18"
+            android:key="mainBtnSVEfont"
+            android:summary="@string/mainBTNsaveSum"
+            android:title="@string/mainBTNsave" />
+
+        <EditTextPreference
+            android:defaultValue="18"
+            android:key="mainbtnBARfont"
+            android:summary="@string/mainBTNbarSum"
+            android:title="@string/mainBTNbar" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="DOWNLOAD tab fonts"
+        android:title="@string/dnldFonts" >
+        <EditTextPreference
+            android:defaultValue="16"
+            android:key="dnldButtons"
+            android:summary="@string/dnldButtonsSum"
+            android:title="@string/dnldButtons" />
+
+        <EditTextPreference
+            android:defaultValue="15"
+            android:key="dnldTexts"
+            android:summary="@string/dnldTextsSum"
+            android:title="@string/dnldTexts" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="SETTINGS tab HTML screen option"
+        android:title="SETTINGS tab HTML screen option" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="useHTMLsettings"
+            android:title="@string/useHTMLsettings" />
+
+        <EditTextPreference
+            android:defaultValue="16"
+            android:key="htmlSettingsButtons"
+            android:title="@string/htmlSettingsButtons" />
+
+        <EditTextPreference 
+            android:defaultValue="14"
+            android:key="htmlSettingsTexts"
+            android:title="@string/htmlSettingsTexts" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="AGPS tab fonts"
+        android:title="@string/agpsFonts" >
+        <EditTextPreference
+            android:defaultValue="15"
+            android:key="agpsTexts"
+            android:summary="@string/agpsTextsSum"
+            android:title="@string/agpsTexts" />
+
+        <EditTextPreference
+            android:defaultValue="16"
+            android:key="agpsButtons"
+            android:summary="@string/agpsButtonsSum"
+            android:title="@string/agpsButtons" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Misc settings" android:key="Misc settings">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="debugPref"
+            android:title="@string/debugPref" />
+
+        <EditTextPreference
+            android:defaultValue="10"
+            android:key="cmdTimeOut"
+            android:summary="@string/cmdTimeOutSum"
+            android:title="@string/logDnldFragment" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

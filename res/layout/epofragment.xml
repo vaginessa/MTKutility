@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- /**
+ * @author Alex Tauber
+ * 
+ * This file is part of the Android app MTKutility.
+ * 
+ * MTKutility is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3 of the License. This extends to files
+ * included that were authored by others and modified to make them suitable for
+ * MTKutility. All files included were subject to open source licensing.
+ * 
+ * MTKutility is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You can review a copy of the GNU General Public License
+ * at http://www.gnu.org/licenses.
+ *
+ */ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/AGPStitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:clickable="false"
+        android:inputType="none"
+        android:maxLines="2"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="15dp"
+        android:textStyle="normal"
+        android:typeface="normal" >
+    </TextView>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rounded_border" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/txvBitm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/AGPStitle"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/mFTP_IP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/mFTP_IP"
+                android:text="@string/mFTP_IP"
+                android:textAppearance="?android:attr/textAppearanceSmall" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/mFTP_port"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/mFTP_port"
+                android:text="@string/mFTP_port"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/mFTP_userid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/mFTP_userid"
+                android:text="@string/mFTP_userid"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/mFTP_pswd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/mFTP_pswd"
+                android:text="@string/mFTP_pswd"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/mFTP_file"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/mFTP_file"
+                android:text="@string/mFTP_file"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btn_save"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="12dp"
+            android:text="@string/btn_save_changes" />
+
+        <Button
+            android:id="@+id/btn_Updt"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btn_save"
+            android:layout_toRightOf="@+id/btn_save"
+            android:minHeight="12dp"
+            android:text="@string/btn_Updt" />
+
+        <Button
+            android:id="@+id/btn_Reset"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btn_Updt"
+            android:layout_toRightOf="@+id/btn_Updt"
+            android:minHeight="12dp"
+            android:text="@string/btn_reset" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/msv_Text"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_border" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/mtv_Serial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

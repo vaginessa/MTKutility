@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- /**
+ * @author Alex Tauber
+ * 
+ * This file is part of the Android app MTKutility.
+ * 
+ * MTKutility is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3 of the License. This extends to files
+ * included that were authored by others and modified to make them suitable for
+ * MTKutility. All files included were subject to open source licensing.
+ * 
+ * MTKutility is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You can review a copy of the GNU General Public License
+ * at http://www.gnu.org/licenses.
+ *
+ */ -->
+<resources>
+
+    <string-array name="listChunkSizeShow">
+        <item>65,536 bytes</item>
+        <item>4,096 bytes</item>
+        <item>2,048 bytes</item>
+        <item>1,024 bytes</item>
+        <item>512 bytes</item>
+        <item>256 bytes</item>
+    </string-array>
+    <string-array name="listChunkSizeReturn">
+        <item>65536</item>
+        <item>4096</item>
+        <item>2048</item>
+        <item>1024</item>
+        <item>512</item>
+        <item>256</item>
+    </string-array>
+    <string-array name="listMemSizeShow">
+        <item>Automatic</item>
+        <item>4 MiB</item>
+        <item>2 MiB</item>
+        <item>1 MiB</item>
+    </string-array>
+    <string-array name="listMemSizeReturn">
+        <item>0</item>
+        <item>4194304</item>
+        <item>2097152</item>
+        <item>1048576</item>
+    </string-array>
+    <string-array name="listOverlapShow">
+        <item>Do not download</item>
+        <item>Download until first empty sector</item>
+        <item>Download full memory</item>
+    </string-array>
+    <string-array name="listOverlapReturn">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="listNMEAfixShow">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="listNMEAfixReturn">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+</resources>
